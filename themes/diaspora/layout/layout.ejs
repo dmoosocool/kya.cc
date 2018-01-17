@@ -1,75 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate">
-    <title><%- config.title%></title>
-    <meta name="keywords" content="素锦, inspiration, customization, rainmeter, design, web, 壁纸, 设计, 收集, wallpaper, collection, jaku, icon">
-    <meta name="description" content="世界上每个角落都有人过着相似的人生">
-    <meta name="author" content="Dmmosocool">
-    <%- css('assets/Diaspora.css') %>
-</head>
+<html lang="<%- page.lang %>">
+<%- partial('_partial/head') %>
 <body class="loading">
-    <div id="loader"></div>
-    <div class="nav">
-        <p>© 2017 素锦. Powered by Hexo.</p>
-    </div>
-    <%- partial('_partial/header'); %>
-
+<%- partial('_partial/header'); %>
 <div id="container">
-    <div id="screen">
-        <div id="mark">
-            <div class="layer" data-depth="0.4">
-                <img id="cover" crossorigin="anonymous" src="images/006tNc79gy1fmiojegryuj31kw0w0dlz.jpg" width="2048" height="1152"/>                
-            </div>
-        </div>
-
-        <div id="vibrant">
-            <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-                <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-            </svg>
-            <div></div>
-        </div>
-
-        <div id="header">
-            <div>
-                <a class="icon-logo" href="/"></a>
-                <div class="icon-menu switchmenu"></div>
-            </div>
-        </div>
-        <div id="post0">
-            <p>我实际上是个十分口拙的人。而且，特别是在关键时刻尤为口拙。比如告别。告别似乎是一个普遍公认的隆...</p>
-            <h2><a data-id="6408" class="posttitle" href="http://isujin.com/6408" />我们都曾畏惧告别</a></h2>
-            <p>我实际上是个十分口拙的人。而且，特别是在关键时刻尤为口拙。比如告别。告别似乎是一个普遍公认的隆...</p>
-        </div>
-    </div>
-
-
-    <div id="primary">
-        <%- body %>
-        <div class="post">
-            <a data-id="6386" href="http://isujin.com/6386" title="余生，我们一起吃饭">
-                <img width="680" height="440" src="http://isujin.com/wp-content/uploads/2017/11/wallhaven-557971.jpg" class="cover">
-            </a>
-            <div class="else">
-                <p>十一月 27, 2017</p>
-                <h3><a data-id="6386" class="posttitle" href="http://isujin.com/6386">余生，我们一起吃饭</a></h3>
-                <p>我和他总是在学校的食堂里相遇。每次遇见他，我总是拉着自己的饭友跑到一个偏僻的角落里就餐。我不想...</p>
-                <p class="here">
-                    <span class="icon-letter">1862</span>
-                    <span class="icon-view">6213</span>
-                    <a href="javascript:;" class="likeThis" id="like-6386"><span class="icon-like"></span><span class="count">73</span></a>        
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="pager"><a href="http://isujin.com/page/2" class="more">加载更多</a></div>
+    <%- body %>
 </div>
-<div id="preview" class="trans"></div>
 <%- partial('_partial/footer') %>
 <%- js('assets/jquery.1.7.min.js') %>
 <%- js('assets/plugin.js') %>

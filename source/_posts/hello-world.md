@@ -1,6 +1,9 @@
 ---
 title: Hello World
+pic: images/006tNc79gy1fmiojegryuj31kw0w0dlz.jpg
 ---
+这是一个示例摘要, 还要凑够字数, 还要凑够字数, 还要凑够字数, 还要凑够字数, 还要凑够字数!!
+<!-- more -->
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
 ## Quick Start

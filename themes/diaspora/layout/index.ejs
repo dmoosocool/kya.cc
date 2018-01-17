@@ -1,1 +1,75 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+<%
+    // 最新的文章.
+    var topArchive, defaultArchive = {
+        date: Date.now(), 
+        path: '/',
+        pic: 'images/006tNc79gy1fmiojegryuj31kw0w0dlz.jpg',
+        content: '暂无文章, 请火速添加.'
+    };
+
+    topArchive = defaultArchive;
+
+    // 如果有则取最新的文章.
+    if(page.posts && page.posts.data) {
+        topArchive = page.posts.data[0];
+    }
+%>
+<div id="screen">
+    <div id="mark">
+        <div class="layer" data-depth="0.4">
+            <img id="cover" crossorigin="anonymous" src="<%- url_for(topArchive.pic) %>" width="2048" height="1152"/>                
+        </div>
+    </div>
+    <div id="vibrant">
+        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
+        </svg>
+        <div></div>
+    </div>
+    <div id="header">
+        <div>
+            <a class="icon-logo" href="<%- url_for() %>"></a>
+            <div class="icon-menu switchmenu"></div>
+        </div>
+    </div>
+    <div id="post0">
+        <p><%- full_date(topArchive.date, 'MMMM DD, YYYY') %></p>
+        <h2><a class="posttitle" href="<%- url_for(topArchive.path) %>" /><%= topArchive.title %></a></h2>
+        <p><%- truncate(strip_html(topArchive.excerpt || topArchive.content ), {length: 50}) %>...</p>
+    </div>
+</div>
+
+
+<div id="primary">
+<%
+if(page.posts && page.posts.data) {
+
+    var archiveList = page.posts.data;
+
+    // 循环文章列表.
+    _.each(archiveList, function( archive, n ) {
+        if(n != 0) {
+    %>
+        <div class="post">
+            <a href="<%- url_for(archive.path)%>" title="<%= archive.title %>">
+                <img width="680" height="440" src="<%- url_for(archive.pic) %>" class="cover">
+            </a>
+            <div class="else">
+                <p><%- full_date(archive.date, 'MMMM DD, YYYY') %></p>
+                <h3><a class="posttitle" href="<%- url_for(archive.path)%>"><%= archive.title %></a></h3>
+                <p><%- truncate(strip_html(archive.excerpt || archive.content), {length: 50}) %>...</p>
+                <p class="here">
+                    <span class="icon-letter">1862</span>
+                    <span class="icon-view">6213</span>
+                    <a href="javascript:;" class="likeThis" id="like-6386"><span class="icon-like"></span><span class="count">73</span></a>        
+                </p>
+            </div>
+        </div>
+    <%
+        }
+    });
+}
+%>
+</div>
+<div id="preview" class="trans"></div>
+<%- partial('_partial/paginator') %>

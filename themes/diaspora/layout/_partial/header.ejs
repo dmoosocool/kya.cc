@@ -1,1 +1,11 @@
-<% console.log(theme); %>
+<div id="loader"></div>
+<div class="nav">
+    <ul id="menu-menu" class="menu">
+        <% for (name in theme.menu) { %>
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="<%- url_for(theme.menu[name]) %>" class="pviewa"><%= name %></a> 
+        </li>
+        <% } %>
+    </ul>
+    <p>© 2018 素锦. Powered by Hexo.</p>
+</div>
