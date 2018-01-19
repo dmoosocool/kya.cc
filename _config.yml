@@ -78,3 +78,6 @@ theme: diaspora
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+live2d:
+  model: haru02

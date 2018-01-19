@@ -35,3 +35,14 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+
+# Gitment
+# Introduction: https://imsun.net/posts/gitment-introduction/
+gitment:
+  enable: true
+  githubID: Dmoosocool
+  repo: kya.cc
+  ClientID: 2ef6eea15884d56005f4
+  ClientSecret: 3b36ec3e6cd7a7f2bc388c44e3664fec18a6b456
+  lazy: true

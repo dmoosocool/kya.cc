@@ -59,7 +59,7 @@ if(page.posts && page.posts.data) {
                 <h3><a class="posttitle" href="<%- url_for(archive.path)%>"><%= archive.title %></a></h3>
                 <p><%- truncate(strip_html(archive.excerpt || archive.content), {length: 50}) %>...</p>
                 <p class="here">
-                    <span class="icon-letter">1862</span>
+                    <span class="icon-letter"><%- strip_html(archive.content).length %></span>
                     <span class="icon-view">6213</span>
                     <a href="javascript:;" class="likeThis" id="like-6386"><span class="icon-like"></span><span class="count">73</span></a>        
                 </p>
