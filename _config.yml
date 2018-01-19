@@ -77,7 +77,11 @@ theme: diaspora
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: aliyun
+  bucket: kyacc
+  region: oss-cn-beijing
+  accessKeyId: LTAIqOFnH3LfDjlO
+  accessKeySecret: SEvPndx8grbSHd0tzXFZU9FQUcVW2O
 
 live2d:
   model: haru02
