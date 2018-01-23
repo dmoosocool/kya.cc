@@ -77,11 +77,15 @@ theme: diaspora
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: aliyun
-  bucket: kyacc
-  region: oss-cn-beijing
-  accessKeyId: LTAIqOFnH3LfDjlO
-  accessKeySecret: SEvPndx8grbSHd0tzXFZU9FQUcVW2O
+  type: rsync
+  host: 119.23.206.34
+  user: root
+  root: /data/wwwroot/kya.cc
+  port: 22 # Default is 22
+  delete: [true] # Default is true
+  args: 
+  verbose: true # Default is true
+  ignore_errors: false # Default is false
 
 live2d:
   model: haru02
