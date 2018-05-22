@@ -3,12 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Dmoo
-subtitle: Dmoosocool
+title: hexo-theme-diaspora
+subtitle: diaspora for hexo.  
 description: DM|全渣攻城獅
-author: DM
+author: Dmoosocool
 language: ch-ZH
 timezone:
+keywords: 'hexo,hexo-theme,disapora,dmoosocool'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
