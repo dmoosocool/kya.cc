@@ -2,6 +2,7 @@
   var pageLoader = function pageLoader(target, options) {
     // 动画数组.
     var spinners = [
+      '<div class="fl spinner0"></div>',
       '<div class="fl spinner1"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>',
       '<div class="fl spinner2"><div class="spinner-container container1"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container2"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container3"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div></div>',
       '<div class="fl spinner3"><div class="dot1"></div><div class="dot2"></div></div>',
@@ -44,7 +45,7 @@
       el.html('<div class="fl"><img src="'+settings.imagePath+'"></div>');
     }
 
-    run();
+    run(settings.spinner);
 
     setTimeout(function(){
       el.fadeOut();
@@ -60,12 +61,18 @@
     var winW = $(window).width(),
         winH = $(window).height(),
         spinnerW = $('.fl').outerWidth(),
-        spinnerH = $('.fl').outerHeight();
+        spinnerH = $('.fl').outerHeight(),
+        left = winW/2 - spinnerW/2,
+        top = winH/2 - spinnerH/2;
+
+    if($('.fl').hasClass('spinner0')){
+      top = top - 50;
+    }
 
     $('.fl').css({
       position: 'absolute',
-      left: winW/2 - spinnerW/2,
-      top: winH/2 - spinnerH/2
+      left: left,
+      top: top
     });
   };
 

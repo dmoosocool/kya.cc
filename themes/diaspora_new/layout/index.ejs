@@ -1,1 +1,29 @@
+<div id="pageLoader"></div>
+<header>
+<%
+    // 最新的文章.
+    var topArchive, defaultArchive = {
+        date: Date.now(), 
+        path: '/',
+        pic: 'images/006tNc79gy1fmiojegryuj31kw0w0dlz.jpg',
+        content: '暂无文章, 请火速添加.'
+    };
+
+    topArchive = defaultArchive;
+
+    // 如果有则取最新的文章.
+    if(page.posts && page.posts.data) {
+        topArchive = page.posts.data[0];
+    }
+
+    // var assetFolder = path.dirname(topArchive.canonical_path);
+    // console.log(assetFolder)
+%>
+  <div id="topArchive" style="background-image:url(<%- topArchive.canonical_path.replace('index.html', topArchive.pic) %>)">
+
+  </div>
+  <h1>header</h1>
+</header>
 <h1>index</h1>
+<%- partial('tpl/footer'); %>
+<%- js('js/index') %>
