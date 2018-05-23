@@ -8,22 +8,24 @@
         pic: 'images/006tNc79gy1fmiojegryuj31kw0w0dlz.jpg',
         content: '暂无文章, 请火速添加.'
     };
-
     topArchive = defaultArchive;
-
     // 如果有则取最新的文章.
     if(page.posts && page.posts.data) {
         topArchive = page.posts.data[0];
     }
-
-    // var assetFolder = path.dirname(topArchive.canonical_path);
-    // console.log(assetFolder)
 %>
-  <div id="topArchive" style="background-image:url(<%- topArchive.canonical_path.replace('index.html', topArchive.pic) %>)">
-
-  </div>
-  <h1>header</h1>
+  
+<div id="topArchive-bg" data-ibg-bg="<%- topArchive.canonical_path.replace('index.html', topArchive.pic) %>">
+    <div id="vibrant">
+        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 " style="fill: rgb(9, 69, 132);"></polygon>
+        </svg>
+        <div style="background-color: rgb(9, 69, 132);"></div>
+    </div>
+</div>
+<h1>header</h1>
 </header>
 <h1>index</h1>
 <%- partial('tpl/footer'); %>
+<%- js('vendor/jquery.interactive_bg.min') %>
 <%- js('js/index') %>
