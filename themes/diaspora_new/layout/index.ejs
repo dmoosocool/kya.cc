@@ -16,12 +16,18 @@
 %>
   
 <div id="topArchive-bg" data-ibg-bg="<%- topArchive.canonical_path.replace('index.html', topArchive.pic) %>">
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 " style="fill: rgb(9, 69, 132);"></polygon>
-        </svg>
-        <div style="background-color: rgb(9, 69, 132);"></div>
-    </div>
+  <div id="vibrant">
+    <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+        <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 " style="fill: rgb(9, 69, 132);"></polygon>
+    </svg>
+    <div style="background-color: rgb(9, 69, 132);"></div>
+  </div>
+
+  <div id="topArchive-content">
+    <p><%- full_date(topArchive.date, 'MMMM DD, YYYY') %></p>
+    <h2><a class="posttitle" href="<%- url_for(topArchive.path) %>" /><%- topArchive.title %></a></h2>
+    <p><%- truncate(strip_html(topArchive.excerpt || topArchive.content ), {length: 50}) %>...</p>
+  </div>
 </div>
 <h1>header</h1>
 </header>
