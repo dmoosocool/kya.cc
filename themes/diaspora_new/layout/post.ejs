@@ -1,1 +1,56 @@
-<h1>post</h1>
+
+<div class="article-wapper">
+  <h2><%- page.title%></h2>
+  
+  <!-- 文章描述 -->
+  <div class="describe">
+    <span class="date"><%- getDiasporaDate(full_date(page.date, 'MM DD, YYYY')) %></span>
+    <span class="length">字数　<%- getArchiveCount(page.content)%></span>
+    <span class="reader"></span>
+    <span class="comment"></span>
+    <span class="likes"></span>
+  </div>
+
+  <!-- 文章正文 -->
+  <div class="content">
+    <%- page.content%>
+  </div>
+</div>
+
+<!-- 相关文章 -->
+<div class="relevant-wapper">
+  <div class="relevant">
+    <div class="relevant-header">
+      <p>
+        <em>相关文章</em>
+        <span>
+          <a href="javacript:void(0)">返回顶部</a>
+          <a href="javacript:void(0)">下一篇</a>
+        </span>
+      </p>
+    </div>
+
+    <ul class="relevant-list">
+      <%
+        var arr = getCategoryList(page);
+        for( var i in arr) {
+          var article = arr[i];
+      %>
+      <li>
+        <div class="article-left">
+          <a href="<%- url_for(article.path) %>"><%- article.title%></a>
+          <p><%- truncate(strip_html(article.excerpt || article.content ), {length: 100}) %></p>
+        </div>
+        <div class="article-right">
+          <a href="<%- url_for(article.path) %>">
+            <img src="<%- getArchivePic(article) %>"/>
+          </a>
+        </div>
+      </li>
+      <%
+        }
+      %>
+    </div>
+  </div>
+</div>
+<%- partial('tpl/footer'); %>
