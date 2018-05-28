@@ -89,6 +89,6 @@ deploy:
   ignore_errors: false # Default is false
 
 live2d:
-  model: haru02
+  model: shizuku #haru02
 
-all_minifier: true
+all_minifier: false

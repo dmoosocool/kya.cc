@@ -3,7 +3,7 @@
  * @param {Object} archive 文章对象.
  */
 var getArchivePic = function getArchivePic(archive) {
-  var defaultPic = '/assets/images/598ac151a702e.jpg';
+  var defaultPic = 'http://os5ajhpu8.bkt.clouddn.com/default.jpg?imageslim';
 
   // 如果文章中没有图片字段则返回默认的图片.
   if(undefined === archive.pic) return defaultPic;

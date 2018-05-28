@@ -2,7 +2,7 @@
 title: 后来的我们
 date: 2018-05-23 15:49:14
 tags:
-pic: default.jpg
+pic: http://os5ajhpu8.bkt.clouddn.com/default.jpg?imageslim
 ---
 
 01
