@@ -24,8 +24,8 @@
       <p>
         <em>相关文章</em>
         <span>
-          <a href="javacript:void(0)">返回顶部</a>
-          <a href="javacript:void(0)">下一篇</a>
+          <a class="scrolltop" href="javacript:void(0)">返回顶部</a>
+          <%- (page.next && page.next.path) ? "<a href="+url_for(page.next.path)+">下一篇</a>" : '<a href="javascript:void(0)">没有了</a>' %>
         </span>
       </p>
     </div>
@@ -54,3 +54,4 @@
   </div>
 </div>
 <%- partial('tpl/footer'); %>
+<%- js('js/post') %>
