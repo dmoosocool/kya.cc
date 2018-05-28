@@ -47,9 +47,17 @@
 
     run(settings.spinner);
 
-    setTimeout(function(){
-      el.fadeOut();
-    }, settings.timeToHide);
+    // setTimeout(function(){
+    //   el.fadeOut();
+    // }, settings.timeToHide);
+    $(function(){
+      var imgLength = $('img').length;
+      var i = 0;
+      $('img').on('load',function(){
+        i++;
+        if(i == imgLength) el.fadeOut();
+      });
+    });
 
     el.css({
       backgroundColor: settings.bgColor,
