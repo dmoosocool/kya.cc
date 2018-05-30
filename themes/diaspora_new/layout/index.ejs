@@ -43,7 +43,7 @@
 %>
   <div class="archive">
     <a href="<%- url_for(archive.path) %>" title="<%- archive.title%>">
-      <img src="<%- getArchivePic(archive) %>"/>
+      <img src="<%- getArchivePic(archive, {width: 680, quality: 100}) %>"/>
     </a>
     <div class="archive-content">
       <p class="archive-time"><%- getDiasporaDate(full_date(archive.date, 'MM DD, YYYY')) %></p>

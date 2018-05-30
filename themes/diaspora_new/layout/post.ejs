@@ -15,6 +15,8 @@
   <div class="content">
     <%- page.content%>
   </div>
+
+  <div id="comment"></div>
 </div>
 
 <!-- 相关文章 -->
@@ -29,7 +31,6 @@
         </span>
       </p>
     </div>
-
     <ul class="relevant-list">
       <%
         var arr = getCategoryList(page);
@@ -43,7 +44,7 @@
         </div>
         <div class="article-right">
           <a href="<%- url_for(article.path) %>">
-            <img src="<%- getArchivePic(article) %>"/>
+            <img src="<%- getArchivePic(article, {width: 200, quality: 100}) %>"/>
           </a>
         </div>
       </li>
@@ -53,5 +54,19 @@
     </div>
   </div>
 </div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: 'bmBLlAnGqYMrkdSpw1HmjPiy-gzGzoHsz',
+    appKey: 'JYawwvAvz8dkzdYAu4qh1RnF',
+    placeholder: 'just go go',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
 <%- partial('tpl/footer'); %>
 <%- js('js/post') %>
