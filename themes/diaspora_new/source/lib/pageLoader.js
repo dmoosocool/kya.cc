@@ -1,5 +1,5 @@
 ;(function(window, undefined){
-  var pageLoader = function pageLoader(target, options) {
+  var pageLoader = function pageLoader(target, options, loaderCallback) {
     // 动画数组.
     var spinners = [
       '<div class="fl spinner0"></div>',
@@ -54,6 +54,9 @@
         // 文档加载完毕.
         $(function(){
           el.fadeOut();
+          $('#container').show();
+
+          loaderCallback && loaderCallback();
         });
       }
     };
