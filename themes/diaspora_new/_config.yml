@@ -9,5 +9,5 @@ qiniu:
   ssl: true #是否开启https
   host:
     http: http://os5ajhpu8.bkt.clouddn.com #七牛http域名
-    https: https://www.kya.cc # 七牛https域名
+    https: https://images.kya.cc # 七牛https域名
   

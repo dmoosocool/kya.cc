@@ -7,6 +7,7 @@ hexo的[diaspora](https://github.com/LoeiFy/Diaspora)主题,
 Task Lists
 - [x] 首页
 - [x] 详细页
+- [x] logo
 - [ ] 导航
 - [ ] 标签页
 - [ ] 自定义页
