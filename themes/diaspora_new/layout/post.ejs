@@ -1,7 +1,12 @@
+<div id="top">
+  <h3 class="subtitle"><%- page.title%></h3>
 
+  <div class="right-iconbar">
+    <a href="javascript:void(0)" onclick="$(this).hasClass('heartAnimation') ? $(this).removeClass('heartAnimation') : $(this).addClass('heartAnimation')" class="like-this" title="like this"></a>
+  </div>
+</div>
 <div class="article-wapper">
   <h2><%- page.title%></h2>
-  
   <!-- 文章描述 -->
   <div class="describe">
     <span class="date"><%- getDiasporaDate(full_date(page.date, 'MM DD, YYYY')) %></span>

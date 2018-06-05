@@ -1,6 +1,7 @@
 .article-wapper
   width 700px
   margin 0 auto
+  padding-top: 50px;
   h2
     margin-top 50px
     font-size 30px
@@ -30,8 +31,13 @@
       background-color #eee
       display block
       margin 30px auto 40px
+
 #comment
   margin 40px 0
+
+/*
+ * relevant
+ */
 .relevant-wapper
   background-color #fafafa
   padding 50px 0
@@ -84,3 +90,56 @@
         img 
           width 100%
           object-fit cover
+
+/*
+ * #top
+ */
+
+ #top 
+   position fixed
+   height 50px
+   border-bottom 1px solid #f7f7f7
+   background-color #fefefe
+   text-align center
+   width 100%
+   top 0
+   z-index 10
+   .subtitle
+     color #666666
+     font-size 14px
+     margin-top 16px
+     font-weight normal
+
+  .right-iconbar
+    position absolute
+    right 0
+    height 50px
+    top 0
+    
+    a
+      font-size 20px
+      text-decoration none
+
+    .like-this
+      background url('/assets/images/heart.png') left no-repeat
+      background-size cover
+      margin-right 15px
+      width 50px
+      height 50px
+      display block
+    
+    .heartAnimation
+      animation-name: heartBlast;
+      animation-duration: .8s;
+      animation-iteration-count: 1;
+      animation-timing-function: steps(28); 
+      background-position: right;
+
+@keyframes heartBlast {  
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
