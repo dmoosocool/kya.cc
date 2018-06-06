@@ -69,7 +69,7 @@ time_format: HH:mm:ss
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: diaspora
+theme: diaspora-new
 
 live2d:
   model: shizuku #haru02
