@@ -75,3 +75,56 @@ live2d:
   model: shizuku #haru02
 
 all_minifier: false
+
+menu:
+  首页: /
+  关于: /about/
+  友链: /links/
+  百度: http://www.baidu.com
+
+links:
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
+  - item:
+      url: https://www.baidu.com
+      icon: https://dmoo.cool/assets/icon.png
+      title: 百度
+      description: 度娘萌萌哒(๑•̀ㅂ•́)و✧

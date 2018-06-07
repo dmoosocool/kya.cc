@@ -8,7 +8,7 @@
  */
 var getArchivePic = function getArchivePic(archive, opts) {
   var pic = '',
-      defaultPic = 'default.jpg',
+      defaultPic = '/assets/images/598ac151a702e.jpg',
       qiniuConfig = hexo.theme.config.qiniu;
       
   archive.pic = archive.pic || defaultPic;
@@ -44,7 +44,7 @@ var getArchivePic = function getArchivePic(archive, opts) {
     // 没有开启七牛.
     else{
       // 如果文章中没有图片字段则返回默认的图片.
-      if(undefined === archive.pic) {
+      if(defaultPic === archive.pic) {
         pic = defaultPic;
       }
       // 否则拿到文章图片
