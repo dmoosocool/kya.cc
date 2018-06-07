@@ -39,7 +39,12 @@ var getArchivePic = function getArchivePic(archive, opts) {
         pic = archive.pic;
       }
 
+      if(pic == defaultPic){
+        pic = 'default_qiniu.jpg';
+      }
+      
       pic = !qiniuConfig.ssl ? [qiniuConfig.host.http, pic].join('/') + optimize : [qiniuConfig.host.https, pic].join('/') + optimize;
+      
     }
     // 没有开启七牛.
     else{

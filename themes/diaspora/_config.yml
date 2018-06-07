@@ -5,7 +5,7 @@
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: night
 qiniu:
-  enabled: false #是否开启七牛
+  enabled: true #是否开启七牛
   ssl: true #是否开启https
   host:
     http: http://os5ajhpu8.bkt.clouddn.com #七牛http域名
