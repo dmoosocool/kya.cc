@@ -1,3 +1,8 @@
+<style>
+  #top .archive-logo {
+    background-image: url("<%- (config.diaspora && config.diaspora.dark_logo) ? config.diaspora.dark_logo : '/assets/images/archive-logo.png'%>") !important;
+  }
+</style>
 <div id="top">
   <a class="archive-logo" href="<%- config.root%>"><%- config.title%></a>
   <h3 class="subtitle"><%- page.title%></h3>
@@ -16,7 +21,7 @@
   <!-- 文章描述 -->
   <div class="describe">
     <span class="date"><%- getDiasporaDate(full_date(page.date, 'MM DD, YYYY')) %></span>
-    <span class="length">字数　<em><%- getArchiveCount(page.content)%></em></span>
+    <span class="length">字数　<em><%- getArticleCount(page.content)%></em></span>
     <span class="reader">阅读 <em></em></span>
     <span class="comment">回复 <em></em></span>
     <span class="likes">喜欢 <em></em></span>
@@ -55,7 +60,7 @@
         </div>
         <div class="article-right">
           <a href="<%- url_for(article.path) %>">
-            <img src="<%- getArchivePic(article, {width: 200, quality: 100}) %>"/>
+            <img src="<%- getArticlePic(article, {width: 200, quality: 100}) %>"/>
           </a>
         </div>
       </li>
@@ -67,7 +72,7 @@
 </div>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<%- partial('tpl/footer'); %>
 <%- js('lib/leancloud'); %>
 <%- js('vendor/qrcode'); %>
-<%- partial('tpl/footer'); %>
 <%- js('js/post'); %>

@@ -97,11 +97,6 @@ links:
       icon: https://dmoo.cool/assets/icon.png
       title: 百度
       description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
-  - item:
-      url: https://torther.club
-      icon: https://torther.club/images/favicon.ico
-      title: Torther
-      description: 回首向来萧瑟处 也无风雨也无晴
 
 # Qiniu OSS.
 ## Key: enabled {boolean} Is it open Qiniu OSS.
@@ -109,7 +104,7 @@ links:
 ## Key: host.http {link_url} QiniuOSS http url.
 ## Key: host https {link_url} QiniuOSS https url.
 qiniu:
-  enabled: true #是否开启七牛
+  enabled: false #是否开启七牛
   ssl: true #是否开启https
   host:
     http: http://os5ajhpu8.bkt.clouddn.com #七牛http域名
@@ -130,5 +125,5 @@ diaspora:
   icon:
   default_pic:
   default_mp3:
-  leancloud_appId: bmBLlAnGqYMrkdSpw1HmjPiy-gzGzoHsz
-  leancloud_appKey: JYawwvAvz8dkzdYAu4qh1RnF
+  leancloud_appId:
+  leancloud_appKey:
