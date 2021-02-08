@@ -8,12 +8,12 @@ subtitle: diaspora for hexo.
 description: DM|全渣攻城獅
 author: Dmoosocool
 language: ch-ZH
-timezone:
+timezone: ''
 keywords: 'hexo,hexo-theme,disapora,dmoosocool'
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+url: http://localhost:4000/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -32,7 +32,10 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -42,8 +45,15 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
-  
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -52,11 +62,15 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -64,7 +78,19 @@ tag_map:
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -72,9 +98,11 @@ time_format: HH:mm:ss
 theme: diaspora
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type:
+  type: ''
+
+
 
 # Menu
 ## key is display words
@@ -97,11 +125,6 @@ links:
       icon: https://dmoo.cool/assets/icon.png
       title: 百度
       description: 度娘萌萌哒(๑•̀ㅂ•́)و✧
-  - item:
-      url: https://torther.club
-      icon: https://torther.club/images/favicon.ico
-      title: Torther
-      description: 回首向来萧瑟处 也无风雨也无晴
 
 # Qiniu OSS.
 ## Key: enabled {boolean} Is it open Qiniu OSS.
@@ -109,11 +132,11 @@ links:
 ## Key: host.http {link_url} QiniuOSS http url.
 ## Key: host https {link_url} QiniuOSS https url.
 qiniu:
-  enabled: true #是否开启七牛
-  ssl: true #是否开启https
+  enabled: false #是否开启七牛
+  ssl: false #是否开启https
   host:
-    http: http://os5ajhpu8.bkt.clouddn.com #七牛http域名
-    https: https://images.kya.cc # 七牛https域名
+    http: #七牛http域名
+    https: # 七牛https域名
 
 # Diaspora theme config.
 ## how to get leancloud appId and appKey? please see doc: https://valine.js.org/quickstart/
@@ -130,5 +153,5 @@ diaspora:
   icon:
   default_pic:
   default_mp3:
-  leancloud_appId: bmBLlAnGqYMrkdSpw1HmjPiy-gzGzoHsz
-  leancloud_appKey: JYawwvAvz8dkzdYAu4qh1RnF
+  leancloud_appId: Y8KPCtDS1smmN1q2ua1KpRWi-gzGzoHsz
+  leancloud_appKey: c9uBbQF5WsPBMN9fkIqwKSQn
